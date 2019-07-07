@@ -1,0 +1,405 @@
+object FormCliente: TFormCliente
+  Left = 439
+  Top = 185
+  Caption = 'Inclus'#227'o de Clientes'
+  ClientHeight = 440
+  ClientWidth = 871
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel
+    Left = 17
+    Top = 8
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel
+    Left = 17
+    Top = 48
+    Width = 45
+    Height = 13
+    Caption = 'Endere'#231'o'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel
+    Left = 18
+    Top = 82
+    Width = 19
+    Height = 13
+    Caption = 'CEP'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel
+    Left = 241
+    Top = 82
+    Width = 42
+    Height = 13
+    Caption = 'Telefone'
+    FocusControl = DBEdit5
+  end
+  object Label7: TLabel
+    Left = 641
+    Top = 152
+    Width = 67
+    Height = 13
+    Caption = 'Renda Mensal'
+  end
+  object Label6: TLabel
+    Left = 72
+    Top = 680
+    Width = 41
+    Height = 13
+    Caption = 'nome_cli'
+    FocusControl = DBEdit7
+  end
+  object Label8: TLabel
+    Left = 72
+    Top = 1128
+    Width = 60
+    Height = 13
+    Caption = 'endereco_cli'
+    FocusControl = DBEdit8
+  end
+  object Label9: TLabel
+    Left = 72
+    Top = 1576
+    Width = 32
+    Height = 13
+    Caption = 'cep_cli'
+    FocusControl = DBEdit9
+  end
+  object Label10: TLabel
+    Left = 72
+    Top = 2024
+    Width = 55
+    Height = 13
+    Caption = 'telefone_cli'
+    FocusControl = DBEdit10
+  end
+  object Label11: TLabel
+    Left = 72
+    Top = 2472
+    Width = 32
+    Height = 13
+    Caption = 'estcivil'
+    FocusControl = DBEdit11
+  end
+  object Label12: TLabel
+    Left = 72
+    Top = 2920
+    Width = 49
+    Height = 13
+    Caption = 'servico_cli'
+    FocusControl = DBEdit12
+  end
+  object Label13: TLabel
+    Left = 72
+    Top = 3368
+    Width = 43
+    Height = 13
+    Caption = 'renda_cli'
+    FocusControl = DBEdit13
+  end
+  object DBEdit2: TDBEdit
+    Left = 17
+    Top = 21
+    Width = 423
+    Height = 21
+    DataField = 'nome_cli'
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBEdit3: TDBEdit
+    Left = 18
+    Top = 61
+    Width = 422
+    Height = 21
+    DataField = 'endereco_cli'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBEdit4: TDBEdit
+    Left = 18
+    Top = 101
+    Width = 208
+    Height = 21
+    DataField = 'cep_cli'
+    DataSource = DataSource1
+    MaxLength = 10
+    TabOrder = 2
+  end
+  object DBEdit5: TDBEdit
+    Left = 209
+    Top = 101
+    Width = 199
+    Height = 21
+    DataField = 'telefone_cli'
+    DataSource = DataSource1
+    MaxLength = 13
+    TabOrder = 3
+  end
+  object GroupBox1: TGroupBox
+    Left = 714
+    Top = 8
+    Width = 134
+    Height = 113
+    Caption = 'Servi'#231'os'
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 365
+    Top = 145
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 18
+    Top = 144
+    Width = 320
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 6
+  end
+  object DBGrid1: TDBGrid
+    Left = 16
+    Top = 192
+    Width = 836
+    Height = 233
+    DataSource = DataSource1
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBEdit6: TDBEdit
+    Left = 72
+    Top = 448
+    Width = 134
+    Height = 21
+    DataField = 'codigo_cli'
+    DataSource = DataSource1
+    TabOrder = 8
+  end
+  object DBEdit7: TDBEdit
+    Left = 72
+    Top = 896
+    Width = 368
+    Height = 21
+    DataField = 'nome_cli'
+    DataSource = DataSource1
+    TabOrder = 9
+  end
+  object DBEdit8: TDBEdit
+    Left = 72
+    Top = 1344
+    Width = 381
+    Height = 21
+    DataField = 'endereco_cli'
+    DataSource = DataSource1
+    TabOrder = 10
+  end
+  object DBEdit9: TDBEdit
+    Left = 72
+    Top = 1792
+    Width = 210
+    Height = 21
+    DataField = 'cep_cli'
+    DataSource = DataSource1
+    MaxLength = 10
+    TabOrder = 11
+  end
+  object DBEdit10: TDBEdit
+    Left = 72
+    Top = 2240
+    Width = 195
+    Height = 21
+    DataField = 'telefone_cli'
+    DataSource = DataSource1
+    MaxLength = 13
+    TabOrder = 12
+  end
+  object DBEdit11: TDBEdit
+    Left = 72
+    Top = 2688
+    Width = 264
+    Height = 21
+    DataField = 'estcivil'
+    DataSource = DataSource1
+    TabOrder = 13
+  end
+  object DBEdit12: TDBEdit
+    Left = 72
+    Top = 3136
+    Width = 264
+    Height = 21
+    DataField = 'servico_cli'
+    DataSource = DataSource1
+    TabOrder = 14
+  end
+  object DBEdit13: TDBEdit
+    Left = 72
+    Top = 3584
+    Width = 134
+    Height = 21
+    DataField = 'renda_cli'
+    DataSource = DataSource1
+    TabOrder = 15
+  end
+  object DBCheckBoxServicos: TDBCheckBox
+    Left = 734
+    Top = 44
+    Width = 97
+    Height = 17
+    Caption = 'Cheque Especial'
+    DataField = 'servico_cli'
+    DataSource = DataSource1
+    TabOrder = 16
+  end
+  object DBCheckBox2: TDBCheckBox
+    Left = 734
+    Top = 81
+    Width = 118
+    Height = 17
+    Caption = 'Cart'#227'o de Cr'#233'dito'
+    DataField = 'servico_cli'
+    DataSource = DataSource1
+    TabOrder = 17
+  end
+  object DBRadioGroup1: TDBRadioGroup
+    Left = 453
+    Top = 8
+    Width = 156
+    Height = 161
+    Caption = 'Estado Civil'
+    DataField = 'estcivil'
+    DataSource = DataSource1
+    Items.Strings = (
+      'Solteiro(a)'
+      'Casado(a)'
+      'Vi'#250'vo(a)'
+      'Desquitado(a)'
+      'Divorciado(a)')
+    TabOrder = 18
+  end
+  object DBEditRenda: TDBEdit
+    Left = 714
+    Top = 147
+    Width = 138
+    Height = 21
+    DataField = 'renda_cli'
+    DataSource = DataSource1
+    TabOrder = 19
+  end
+  object DataSource1: TDataSource
+    DataSet = FDMemTable1
+    Left = 632
+    Top = 80
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'codigo_cli'
+        DataType = ftAutoInc
+      end
+      item
+        Name = 'nome_cli'
+        DataType = ftString
+        Size = 40
+      end
+      item
+        Name = 'endereco_cli'
+        DataType = ftString
+        Size = 60
+      end
+      item
+        Name = 'cep_cli'
+        DataType = ftString
+        Size = 10
+      end
+      item
+        Name = 'telefone_cli'
+        DataType = ftString
+        Size = 15
+      end
+      item
+        Name = 'estcivil'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'servico_cli'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'renda_cli'
+        DataType = ftCurrency
+        Precision = 19
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 632
+    Top = 16
+    object FDMemTable1codigo_cli: TAutoIncField
+      DisplayWidth = 8
+      FieldName = 'codigo_cli'
+      Required = True
+    end
+    object FDMemTable1nome_cli: TStringField
+      DisplayWidth = 25
+      FieldName = 'nome_cli'
+      OnValidate = FDMemTable1nome_cliValidate
+      Size = 40
+    end
+    object FDMemTable1endereco_cli: TStringField
+      DisplayWidth = 23
+      FieldName = 'endereco_cli'
+      Size = 60
+    end
+    object FDMemTable1cep_cli: TStringField
+      DisplayWidth = 16
+      FieldName = 'cep_cli'
+      EditMask = '00.000\-999;1;_'
+      Size = 10
+    end
+    object FDMemTable1telefone_cli: TStringField
+      DisplayWidth = 15
+      FieldName = 'telefone_cli'
+      EditMask = '!\(99\)0000-0000;1;_'
+      Size = 15
+    end
+    object FDMemTable1estcivil: TStringField
+      DisplayWidth = 14
+      FieldName = 'estcivil'
+    end
+    object FDMemTable1servico_cli: TStringField
+      DisplayWidth = 14
+      FieldName = 'servico_cli'
+    end
+    object FDMemTable1renda_cli: TCurrencyField
+      FieldName = 'renda_cli'
+    end
+  end
+end

@@ -1,0 +1,131 @@
+unit UnitCadastroCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.ExtCtrls, FireDAC.Stan.StorageJSON,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFormCliente = class(TForm)
+    DataSource1: TDataSource;
+    FDMemTable1: TFDMemTable;
+    FDMemTable1codigo_cli: TAutoIncField;
+    FDMemTable1nome_cli: TStringField;
+    FDMemTable1endereco_cli: TStringField;
+    FDMemTable1cep_cli: TStringField;
+    FDMemTable1telefone_cli: TStringField;
+    FDMemTable1estcivil: TStringField;
+    FDMemTable1servico_cli: TStringField;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    GroupBox1: TGroupBox;
+    Button1: TButton;
+    DBNavigator1: TDBNavigator;
+    Label7: TLabel;
+    DBGrid1: TDBGrid;
+    DBEdit6: TDBEdit;
+    Label6: TLabel;
+    DBEdit7: TDBEdit;
+    Label8: TLabel;
+    DBEdit8: TDBEdit;
+    Label9: TLabel;
+    DBEdit9: TDBEdit;
+    Label10: TLabel;
+    DBEdit10: TDBEdit;
+    Label11: TLabel;
+    DBEdit11: TDBEdit;
+    Label12: TLabel;
+    DBEdit12: TDBEdit;
+    Label13: TLabel;
+    DBEdit13: TDBEdit;
+    DBCheckBoxServicos: TDBCheckBox;
+    DBCheckBox2: TDBCheckBox;
+    DBRadioGroup1: TDBRadioGroup;
+    DBEditRenda: TDBEdit;
+    FDMemTable1renda_cli: TCurrencyField;
+    FDMemTable1servico_cartao: TStringField;
+    procedure FDMemTable1nome_cliValidate(Sender: TField);
+    procedure FDMemTable1renda_cliValidate(Sender: TField);
+    procedure Button1Click(Sender: TObject);
+    procedure FDMemTable1renda_cliChange(Sender: TField);
+    procedure FDMemTable1servico_cartaoChange(Sender: TField);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCliente: TFormCliente;
+
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormCliente.Button1Click(Sender: TObject);
+var renda: Integer;
+begin
+  if FDMemTable1.State in dsEditModes then
+  begin
+    FDMemTable1.Post;
+  end;
+    renda := StrToInt(DBEditRenda.Text);
+  if renda >= 2000 then
+  begin
+    DBCheckBox2.Checked;
+  end
+  else
+  begin
+     DBCheckBoxServicos.Checked;
+  end;
+end;
+
+
+
+procedure TFormCliente.FDMemTable1nome_cliValidate(Sender: TField);
+begin
+  if Length(Sender.AsString) < 4 then
+  begin
+    raise Exception.Create('O nome deve ter pelo menos 4 letras');
+  end;
+end;
+
+procedure TFormCliente.FDMemTable1renda_cliChange(Sender: TField);
+begin
+  if (FDMemTable1renda_cli.Value >= 2000) and (FDMemTable1renda_cli.Value <= 4000) then
+  begin
+    FDMemTable1servico_cli.AsString := 'True';
+  end;
+end;
+
+procedure TFormCliente.FDMemTable1renda_cliValidate(Sender: TField);
+begin
+  if Sender.AsInteger <= 0 then
+  begin
+    raise Exception.Create
+      ('Informe um valor válido. Renda não pode ser igual ou menor do que zero.');
+  end;
+end;
+
+procedure TFormCliente.FDMemTable1servico_cartaoChange(Sender: TField);
+begin
+    if (FDMemTable1renda_cli.Value >= 2000) and (FDMemTable1renda_cli.Value <= 4000) then
+  begin
+    FDMemTable1servico_cartao.AsString := 'True';
+  end;
+end;
+
+end.

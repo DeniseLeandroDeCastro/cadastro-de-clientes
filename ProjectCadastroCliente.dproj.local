@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/04/02 10:23:57.000.192,=C:\Users\dmari\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/04/02 11:17:32.000.709,C:\Users\dmari\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dmari\Documents\Embarcadero\Studio\Projects\AtividadeAvaliativa\UnitCadastroCliente.dfm</Transaction>
+    <Transaction>2019/04/02 11:17:32.000.709,C:\Users\dmari\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dmari\Documents\Embarcadero\Studio\Projects\AtividadeAvaliativa\UnitCadastroCliente.pas</Transaction>
+    <Transaction>2019/04/02 11:17:56.000.036,C:\Users\dmari\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dmari\Documents\Embarcadero\Studio\Projects\AtividadeAvaliativa\ProjectCadastroCliente.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
